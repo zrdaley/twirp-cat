@@ -1,0 +1,19 @@
+syntax = "proto3";
+package zrdaley.cat;
+option go_package = "/cat";
+
+service CatGenerator {
+  rpc MakeCat(CatInput) returns (Cat);
+}
+
+message CatInput {
+  string name = 1;
+}
+
+message Cat {
+  string name = 1;
+
+  string favoriteTreat = 2;
+
+  string coat = 3;
+}
